@@ -1,0 +1,31 @@
+@mixin text($size: inherit, $weight: inherit, $height: inherit) {
+  font-size: rem($size);
+  font-weight: $weight;
+  line-height: rem($height);
+}
+
+@mixin for-tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin for-desktop-1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin for-desktop-1234 {
+  @media (max-width: 1234px) {
+    @content;
+  }
+}
+@mixin for-desktop-1366 {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin for-big-desktop {
+  @media (max-width: 1924px) {
+    @content;
+  }
+}
