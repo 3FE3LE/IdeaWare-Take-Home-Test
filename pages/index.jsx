@@ -36,22 +36,26 @@ export default function Home() {
       <main className="">
         <section className="landing">
           <div className="landing__content--left">
-            <img
-              className="landing__content--logo"
-              src="/tidal.png"
-              alt="Tidal Traffic"
-            />
-            <h4>Attention Online Advertisers</h4>
-            <h1>What’s Your Online Advertising Readiness Rating?</h1>
-            <p>
-              When you take this quiz, you’ll get a free report that outlines
-              YOUR Readiness Rating.
-            </p>
-            <Button primary>START QUIZ</Button>
-            <p>Learn more about Readiness Raitings</p>
+            <div className="landing__header">
+              <img
+                className="landing__content--logo"
+                src="/tidal.png"
+                alt="Tidal Traffic"
+              />
+              <Button>START QUIZ</Button>
+            </div>
+            <div className="landing__info">
+              <h4>Attention Online Advertisers</h4>
+              <h1>What’s Your Online Advertising Readiness Rating?</h1>
+              <p>
+                When you take this quiz, you’ll get a free report that outlines
+                YOUR Readiness Rating.
+              </p>
+              <Button primary>START QUIZ</Button>
+              <p>Learn more about Readiness Raitings</p>
+            </div>
           </div>
           <div className="landing__content--right">
-            <Button>START QUIZ</Button>
             <div className="landing__footer">
               <small>
                 Learning about my rating - and WHAT to do about it, has really
@@ -68,7 +72,7 @@ export default function Home() {
               <img key={paper.path} src={paper.path} alt={paper.alt} />
             ))}
           </div>
-          <Posts/>
+          <Posts />
         </section>
         <section className="feed__content">
           <div className="feed__content--info">

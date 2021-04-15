@@ -44,27 +44,45 @@ button {
 h1 {
   @include text(50, 900, 61);
   margin: rem(24) 0;
+  @include for-tablet {
+    @include text(28, 800, 37);
+    text-align: center;
+  }
 }
 
 h2 {
   @include text(48, 800, 64);
   margin: rem(20) 0;
+  @include for-tablet {
+    @include text(26, 800, 35);
+    text-align: center;
+  }
 }
 
 h3 {
   @include text(35, 700, 52.5);
   margin: rem(16) 0;
+  @include for-tablet {
+    @include text(20, 700, 30);
+    text-align: center;
+  }
 }
 h4 {
   @include text(14, 500, 16);
   letter-spacing: rem(4);
   text-transform: uppercase;
   margin: rem(12) 0;
+  @include for-tablet {
+    text-align: center;
+  }
 }
 
 p {
   @include text(20, 500, 34);
   margin: rem(8) 0;
+  @include for-tablet {
+    @include text(18, 600, 27);
+  }
 }
 
 small {
@@ -76,16 +94,62 @@ small {
   height: 100vh;
   width: 100%;
   display: flex;
+  box-sizing: border-box;
+  &__header {
+    display: flex;
+    justify-content: start;
+    background: transparent;
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    @include for-tablet {
+      width: 100vh;
+      background: #6424ff;
+      height: rem(134);
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      button {
+        position: relative;
+      }
+    }
+  }
+  &__info {
+    background: #6424ff;
+    padding: rem(30) rem(15);
+    margin: rem(51) rem(26);
+    @include for-tablet{
+      button{
+        @include text (28, 800, 33)
+      }
+    }
+
+  }
   &__content {
     &--logo {
       height: rem(50);
       margin-bottom: rem(50);
+      @include for-tablet {
+        margin: 0;
+      }
     }
     &--left {
       width: 50%;
       padding: rem(30) rem(70) rem(0) rem(100);
       background: #6424ff;
       color: white;
+      @include for-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        background-image: url("/landing-photo.jpg");
+      }
     }
     &--right {
       // display: flex;
@@ -95,6 +159,9 @@ small {
       background-position: center;
       text-align: end;
       position: relative;
+      @include for-tablet {
+        display: none;
+      }
     }
   }
   &__footer {
@@ -108,6 +175,9 @@ small {
     box-sizing: border-box;
     color: white;
     background: #00000030;
+    @include for-tablet {
+      display: none;
+    }
   }
 }
 
@@ -124,6 +194,9 @@ small {
     img {
       margin: 0 rem(30);
     }
+    @include for-desktop-1234 {
+      display: none;
+    }
   }
   &__posts {
     display: flex;
@@ -138,6 +211,9 @@ small {
     padding: rem(30);
     max-height: 100vh;
     overflow-y: scroll;
+    @include for-tablet {
+      margin: rem(20) 0;
+    }
     &--text {
       @include text(18, 500, 27);
     }
@@ -155,14 +231,22 @@ small {
   }
   &__content {
     display: flex;
+    flex-wrap: wrap;
     padding: rem(100);
     color: #333333;
+    @include for-tablet {
+      padding: rem(20) rem(24);
+    }
     &--info {
     }
     &--img {
       margin: rem(-50) 0;
       object-fit: contain;
       object-position: center;
+      @include for-tablet {
+        width: 100%;
+        margin: 0;
+      }
     }
   }
 }
@@ -187,5 +271,8 @@ small {
     height: rem(100);
     justify-content: space-around;
     align-items: center;
+    @include for-tablet {
+      display: none;
+    }
   }
 }
