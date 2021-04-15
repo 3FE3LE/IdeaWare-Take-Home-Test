@@ -8,6 +8,8 @@ const Button = styled.button`
   line-height: 26px;
   text-align: center;
   padding: 10px 30px;
+  box-shadow: 0 3px 7px 0 #0000001A;
+
   ${(props) =>
     props.primary &&
     css`

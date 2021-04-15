@@ -52,7 +52,9 @@ export default function Home() {
                 YOUR Readiness Rating.
               </p>
               <Button primary>START QUIZ</Button>
-              <p>Learn more about Readiness Raitings</p>
+              <p className="landing__info--link">
+                Learn more about Readiness Raitings
+              </p>
             </div>
           </div>
           <div className="landing__content--right">
@@ -105,6 +107,10 @@ export default function Home() {
           <small>©2019 Tidal Traffic. All rights reserved.</small>
           <small>©2019 Tidal Traffic. All rights reserved.</small>
           <small>About Us | Terms of Service | Privacy Policy</small>
+        </div>
+        <div className="footer__info--mobile">
+          <img src="/tidal-white.png" alt="Tidal Traffic Logo" />
+          <small>©2019 Tidal Traffic. <br/> All rights reserved.</small>
         </div>
       </footer>
     </>
