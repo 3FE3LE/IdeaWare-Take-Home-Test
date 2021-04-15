@@ -1,5 +1,5 @@
 import React from "react";
-import useAxios from "../hooks/useAxios";
+import useAxios from "../../hooks/useAxios";
 import Card from "./Card";
 
 const Posts = () => {
