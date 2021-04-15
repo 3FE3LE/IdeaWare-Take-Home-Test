@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
 const Button = styled.button`
-  background: "white";
-  color: "#333333";
+  background: white;
+  color: #333333;
   font-weight: 800;
   font-size: 20px;
   line-height: 26px;
