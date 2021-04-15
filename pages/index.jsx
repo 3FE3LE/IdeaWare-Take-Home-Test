@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Button from "./components/Button";
+import Posts from "./components/Posts";
 
 export default function Home() {
   const newsletters = [
@@ -35,6 +36,11 @@ export default function Home() {
       <main className="">
         <section className="landing">
           <div className="landing__content--left">
+            <img
+              className="landing__content--logo"
+              src="/tidal.png"
+              alt="Tidal Traffic"
+            />
             <h4>Attention Online Advertisers</h4>
             <h1>What’s Your Online Advertising Readiness Rating?</h1>
             <p>
@@ -62,10 +68,7 @@ export default function Home() {
               <img key={paper.path} src={paper.path} alt={paper.alt} />
             ))}
           </div>
-          <div>
-            <div></div>
-            <h1>POSTS</h1>
-          </div>
+          <Posts/>
         </section>
         <section className="feed__content">
           <div className="feed__content--info">
@@ -74,11 +77,13 @@ export default function Home() {
             <p>
               ...will help you understand just how bullish you should be with
               your ad spend and where your blind spots are.
-              <br/><br/>
+              <br />
+              <br />
               When it comes to online advertising the more informed and ready
               you are, the more effective your advertising will be (and the
               greater your chances of a healthy Return on your Ad Spend (ROAS)).
-              <br/><br/>
+              <br />
+              <br />
               Find Out your Online Advertising Readiness Rating so you can make
               more money and avoid risks with your online advertising.
             </p>

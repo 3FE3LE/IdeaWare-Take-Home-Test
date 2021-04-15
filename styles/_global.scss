@@ -12,11 +12,11 @@
   display: none;
 }
 
-input{
+input {
   outline: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -24,9 +24,8 @@ ul {
   list-style-type: none;
 }
 
-body{
+body {
 }
-
 
 * {
   font-family: "Raleway", sans-serif;
@@ -44,28 +43,33 @@ button {
 
 h1 {
   @include text(50, 900, 61);
-  // color: white;
+  margin: rem(24) 0;
 }
 
 h2 {
   @include text(48, 800, 64);
+  margin: rem(20) 0;
 }
 
 h3 {
   @include text(35, 700, 52.5);
+  margin: rem(16) 0;
 }
 h4 {
   @include text(14, 500, 16);
   letter-spacing: rem(4);
   text-transform: uppercase;
+  margin: rem(12) 0;
 }
 
 p {
   @include text(20, 500, 34);
+  margin: rem(8) 0;
 }
 
 small {
   @include text(12, 700, 16);
+  margin: rem(4) 0;
 }
 
 .landing {
@@ -73,6 +77,10 @@ small {
   width: 100%;
   display: flex;
   &__content {
+    &--logo {
+      height: rem(50);
+      margin-bottom: rem(50);
+    }
     &--left {
       width: 50%;
       padding: rem(30) rem(70) rem(0) rem(100);
@@ -96,14 +104,15 @@ small {
     bottom: 0;
     left: 0;
     right: 0;
-    padding:rem(30);
+    padding: rem(30);
     box-sizing: border-box;
     color: white;
     background: #00000030;
   }
 }
-.feed{
-  &__newsletters{
+
+.feed {
+  &__newsletters {
     display: flex;
     overflow-x: scroll;
     width: 100%;
@@ -112,25 +121,54 @@ small {
     box-sizing: border-box;
     justify-content: space-evenly;
     opacity: 0.5;
-    img{
+    img {
       margin: 0 rem(30);
     }
   }
-  &__content{
+  &__posts {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-items: stretch;
+    justify-content: stretch;
+    align-items: stretch;
+    background: #6424ff;
+    margin: 0 rem(100);
+    box-sizing: border-box;
+    padding: rem(30);
+    max-height: 100vh;
+    overflow-y: scroll;
+    &--text {
+      @include text(18, 500, 27);
+    }
+    &--author {
+      @include text(18, 700, 27);
+      color: #6424ff;
+    }
+    &--date {
+      @include text(20, 700, 30);
+      color: white;
+    }
+    &--content {
+      margin-bottom: 30px;
+    }
+  }
+  &__content {
     display: flex;
     padding: rem(100);
     color: #333333;
-    &--info{
-      
+    &--info {
     }
-    &--img{
+    &--img {
       margin: rem(-50) 0;
+      object-fit: contain;
+      object-position: center;
     }
   }
 }
 
-.footer{
-  &__promo{
+.footer {
+  &__promo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,12 +177,12 @@ small {
     background: #6424ff;
     color: white;
     position: relative;
-    button{
+    button {
       position: absolute;
       bottom: rem(-40);
     }
   }
-  &__info{
+  &__info {
     display: flex;
     height: rem(100);
     justify-content: space-around;
