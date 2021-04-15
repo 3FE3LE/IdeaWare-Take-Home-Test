@@ -4,7 +4,7 @@ import Card from "./Card";
 
 const Posts = () => {
   const { isLoading, isError, data: feed } = useAxios(
-    "http://api.massrelevance.com/MassRelDemo/kindle.json"
+    "https://api.massrelevance.com/MassRelDemo/kindle.json"
   );
 
   if (isLoading) {
@@ -12,14 +12,15 @@ const Posts = () => {
   }
   return (
     <div className="feed__posts">
+      <div className="feed__controls"></div>
       {feed &&
         feed.map((post) => (
-          <div className="feed__posts--content" key={post.id}>
+          <div className="article" key={post.id}>
             <Card >
-              <p className="feed__posts--text">{post.text}</p>
-              <span className="feed__posts--author">{post.user.name}</span>
+              <p className="article__text">{post.text}</p>
+              <span className="article__author">{post.user.name}</span>
             </Card>
-            <span className="feed__posts--date">Posted: {post.created_at}</span>
+            <span className="article__date">Posted: {post.created_at}</span>
           </div>
         ))}
       {isError && <div>Error fetching data.</div>}

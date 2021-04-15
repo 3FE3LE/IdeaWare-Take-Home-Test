@@ -224,18 +224,18 @@ small {
     @include for-tablet {
       margin: rem(20) 0;
     }
-    &--text {
-      @include text(18, 500, 27);
-    }
-    &--author {
-      @include text(18, 700, 27);
-      color: #6424ff;
-    }
-    &--date {
-      @include text(20, 700, 30);
-      color: white;
-    }
-    &--content {
+    & .article {
+      &__text {
+        @include text(18, 500, 27);
+      }
+      &__author {
+        @include text(18, 700, 27);
+        color: #6424ff;
+      }
+      &__date {
+        @include text(20, 700, 30);
+        color: white;
+      }
       margin-bottom: 30px;
     }
   }
