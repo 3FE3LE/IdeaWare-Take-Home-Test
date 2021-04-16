@@ -1,4 +1,5 @@
 import Head from "next/head";
+// import components
 import Button from "./components/Button";
 import Posts from "./components/Posts";
 

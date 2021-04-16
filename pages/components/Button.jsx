@@ -22,8 +22,9 @@ const Button = styled.button`
   ${(props) =>
     props.control &&
     css`
-      width:30px;
-      padding: 3px;
+      /* width:30px; */
+      padding: 3px 12px;
+      margin: 0 5px 0 0;
       background: white;
       color: #333333;
       border-radius: 4px;

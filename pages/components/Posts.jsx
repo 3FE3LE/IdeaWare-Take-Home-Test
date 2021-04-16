@@ -1,4 +1,3 @@
-import React from "react";
 import moment from "moment";
 import { connect } from "react-redux";
 import { setLimit } from "../../redux/actions";
@@ -15,7 +14,6 @@ const Posts = (props) => {
     limit
   );
 
-  
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -30,10 +28,20 @@ const Posts = (props) => {
               -
             </Button>
           ) : null}
-          <span>{limit}</span>
-          {limit < 15 ? (
+          <span>{limit == 0 ? "Max" : limit}</span>
+          {limit != 0 ? (
             <Button control onClick={() => setLimit(limit + 1)}>
               +
+            </Button>
+          ) : null}
+          {limit != 1 ? (
+            <Button control onClick={() => setLimit(1)}>
+              Min
+            </Button>
+          ) : null}
+          {limit != 0 ? (
+            <Button control onClick={() => setLimit(0)}>
+              Max
             </Button>
           ) : null}
         </div>
