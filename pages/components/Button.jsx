@@ -14,7 +14,7 @@ const Button = styled.button`
     props.primary &&
     css`
       font-size: 38px;
-      line-height: 45px;
+      line-height: 45px:
       background: #06f48a;
       color: white;
       padding: 20px 70px;

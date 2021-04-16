@@ -6,8 +6,6 @@ import reducer from "../redux/reducers";
 function MyApp({ Component, pageProps }) {
   const initialState = {
     limit: 4,
-    startId: "",
-    time: 1,
     url: "https://api.massrelevance.com/MassRelDemo/kindle.json",
   };
 
