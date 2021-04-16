@@ -97,7 +97,7 @@ small {
   box-sizing: border-box;
   &__header {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     background: transparent;
     button {
       position: absolute;
@@ -138,7 +138,7 @@ small {
       height: rem(50);
       margin-bottom: rem(50);
       @include for-tablet {
-        margin: 0;
+        margin-bottom: rem(5);
       }
     }
     &--left {
@@ -192,6 +192,7 @@ small {
 }
 
 .feed {
+  position: relative;
   &__newsletters {
     display: flex;
     overflow-x: scroll;
@@ -208,13 +209,30 @@ small {
       display: none;
     }
   }
+  &__controls{
+    width: 100%;
+    background: #6424ff;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: rem(-30);
+    padding: rem(20) rem(10);
+    margin: rem(10) 0;
+    div{
+      text-align: center;
+    }
+    span{
+      text-align: center;
+      height: rem(30);
+      width: rem(30);
+      margin: 0 rem(5);
+    }
+  }
   &__posts {
     display: flex;
     flex-wrap: wrap;
-    align-content: stretch;
-    justify-items: stretch;
-    justify-content: stretch;
-    align-items: stretch;
     background: #6424ff;
     margin: 0 rem(100);
     box-sizing: border-box;

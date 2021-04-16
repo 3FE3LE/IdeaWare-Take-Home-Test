@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 
 import axios from "axios";
 
-const useAxios = (url) => {
+const useAxios = (url,limit,time) => {
   const [data, setData] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
 
   const [isError, setIsError] = useState(false);
+
+  const millisecondsTime = 1000*60*time;
 
   const fetchData = async () => {
     try {
@@ -25,9 +27,14 @@ const useAxios = (url) => {
     }
   };
 
+  setInterval(() => {
+    fetchData
+    console.log(millisecondsTime)
+  }, millisecondsTime);
+
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [limit,url,time]);
 
   return { isLoading, isError, data };
 };

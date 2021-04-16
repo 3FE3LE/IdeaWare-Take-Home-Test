@@ -19,6 +19,16 @@ const Button = styled.button`
       color: white;
       padding: 20px 70px;
     `}
+  ${(props) =>
+    props.control &&
+    css`
+      width:30px;
+      padding: 3px;
+      background: white;
+      color: #333333;
+      border-radius: 4px;
+      box-sizing:border-box;
+    `}
 `;
 
 export default Button;
